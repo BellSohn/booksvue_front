@@ -1,0 +1,862 @@
+/*header-menu*/
+#header-component {
+    margin: 0px 0px -10px 0px;
+    width: 100%;
+    height: 120px;
+    background: #3da43d;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header-title h2{
+    margin: 0px 0px 7px 320px;
+}
+
+.logged-user-data{
+    margin-left: 5px;
+}
+
+.logged-user-data b{
+    color: chocolate;
+    background: white;
+}
+
+.logout-div{
+    margin-left: 5px;
+}
+
+.logout-div span a{
+    color: white;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+.logout-div span a:hover{
+    color: red;
+    background: white;
+}
+
+.logout-div .lnk-to-profil{
+    color: white;
+    text-decoration: none;
+    transition: all 300ms;
+}
+.logout-div .lnk-to-profil:hover{
+    color: chocolate;
+    background: white;
+}
+
+.div-menu-standart{
+    margin-left: 87px;
+    height: 90px;
+    margin-top: 18px;
+}
+
+.div-menu-standart ul > li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 157px;
+}
+
+.div-menu-standart ul > li > a{
+    color: white;
+    text-decoration: none;
+    transition: all 300ms;
+
+}
+.div-menu-standart ul > li >a:hover{
+    color: green;
+    background: orange;
+    font-size: medium;
+
+}
+
+.div-menu-log-user{
+    margin-left: 244px;
+    height: 90px;
+    margin-top: -13px;
+}
+
+.div-menu-log-user ul > li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 157px;
+}
+
+.div-menu-log-user ul > li > a{
+    color: white;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+.div-menu-log-user ul>li>a:hover{
+    color: green;
+    background: orange;
+    font-size: medium;
+}
+
+
+.div-menu-log-admin {
+    margin-left: 87px;
+    height: 90px;
+    margin-top: -13px;
+}
+
+.div-menu-log-admin ul > li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 157px;
+}
+
+.div-menu-log-admin ul > li >a {
+    color: white;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+.div-menu-log-admin ul>li>a:hover {
+    color: green;
+    background: orange;
+    font-size: medium;
+}
+
+
+#last-books-section {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;    
+    background: chocolate;
+}
+
+#last-books-section p {
+    margin-left: 529px;
+    
+}
+
+.book-article {   
+    text-align: center;    
+    border-radius: 6px;
+    padding: 12px;
+    width: 50%;
+    height: 240px;
+    font-size: 12px;
+    margin: 30px 0px 24px 258px;
+}
+
+.book-article span{
+    margin-left: 10px;
+}
+
+.book-article  a{
+    text-decoration: none;
+    border: none;
+    background: #3da43d;
+    color: white;
+    font-weight: bold;
+    transition: all 300ms;
+}
+.book-article a:hover{
+    background: white;
+    color: chocolate;
+}
+
+.booktitle {
+    margin: 10px 0px 10px 0px
+}
+
+.image-wrap{
+    text-align: center;
+}
+
+.image-wrap img {
+    width: 130px;
+    height: 130px;
+    margin-left: 27px;
+}
+
+.updateuser-success h4 {
+    background:#3da43d;
+    color: white;
+    width: 316px;
+    text-align: center;
+    margin-left: 453px;
+}
+
+.loan-section {
+    border: 2px red solid;
+    width: 60%;
+    float: right;
+    text-align: center;
+    margin: -379px 87px 0px 0px;
+}
+
+.warning-style {
+    color: red;
+    font-weight: bold;
+}
+
+.positive-message{
+    background: white;
+    color: #3da43d;
+    font-weight: bold;
+}
+
+.book-borrowed-msg{
+    background: white;
+    color: chocolate;
+    font-weight: bold;
+    border: 2px solid green;
+}
+
+.background-green {
+    background-color: green;
+}
+
+.table-div {
+    border: 2px solid;
+    width: 73%;
+    margin-left: 77px;
+}
+
+.loan-div {
+    width: 80%;
+    margin: 1px 0px 0px 64px;
+}
+
+.book-article label {
+    font-weight: bold;
+}
+
+.activ-style {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    background: #3da43d;
+    width: 233px;
+}
+.left-align{
+    margin-left:450px;
+}
+
+.completed-style {
+    color: #3da43d;
+    font-size: 17px;
+    font-weight: bold;
+    background:white;
+    width: 233px;
+    text-align: center;
+}
+
+/*footer*/
+#footer-component{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #3da43d;
+    color: white;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: -24px 0px -8px 0px;
+}
+
+
+.footer-section div  {
+    float: right;    
+    margin: 10px 303px 0px 16px;
+}
+
+#footer-section {
+    background: gold;
+}
+
+/*books*/
+
+#book-seek-greet{
+margin-top: 30px;
+padding: 17px;
+color: white;
+background: chocolate;
+height:800px;
+text-align: center;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.serch-aside{
+    margin-right: 22px;
+    margin-top: 7px;
+    display: flex;
+    text-align: center;
+    width: 30%;
+    border: 2px solid;
+    border-radius: 13px;
+    float: right;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 11px;
+}
+
+.serch-aside h3{
+    margin: 4px 0px 0px 93px;
+}
+
+.serch-aside p{
+    margin: 4px 0px 11px 100px;
+}
+
+.search-form{
+    margin: 10px 0px 0px 100px;
+    display: table-caption;
+}
+
+.search-form input[type="submit"]{
+    margin-top: 10px;
+    color: white;
+    background-color: #3da43d;
+    border: white;
+    transition: all 300ms;
+}
+
+.search-form input[type="submit"]:hover{
+    color: chocolate;
+    background: white;
+    border-width: 3px;
+    border-color: #3da43d;
+}
+
+/*search component*/
+
+.search-founded-books-container{
+    background: chocolate;
+    color: white;
+    /*height: 501px;*/
+    max-height: fit-content;
+    min-height: 501px;
+}
+
+/*SearchComponent /buscador*/
+.books-section{
+    margin-top: -30px;
+}
+
+.noresults-div{
+    color: green;
+    background: #d19864;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*register user*/
+.register-user-section{
+    background: chocolate;
+    height:501px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.register-title h3{
+    color: white;
+    margin-left: 450px;
+    margin-bottom: 20px;
+}
+
+#formNewUser{
+    margin-left: 400px;
+    border: 2px solid white;
+    border-radius: 13px;
+    border-radius: 10px;
+    color:white;
+    margin-top: 20px;
+    width: 30%;
+    padding: 13px;
+}
+#formNewUser label{
+    width: 60px;
+   margin-right: 40px;
+}
+
+#formNewUser div{
+   /* width: 200px;*/
+    display: flex;
+}
+
+#formNewUser div input{
+   margin-top: 10px;
+}
+
+#formNewUser div textarea{
+    margin-top: 10px;
+ }
+
+ #formNewUser input[type="submit"]{
+    margin-top: 26px;
+    margin-left: 140px;
+    width: 87px;
+    background: #3da43d;
+    color: white;
+    transition: all 300ms;
+    border: none;
+    font-weight: bold;
+ }
+
+ #formNewUser input[type="submit"]:hover{
+    background: white;
+    color: chocolate;
+ }
+
+ /*success-register*/
+
+ #register-msg{
+    color: white;
+    font-weight: bold;
+    margin-left: 718px;
+ }
+
+ .lnk-reg{
+    text-decoration: none;
+    color: #3da43d;
+    background: white;
+    transition: all 300ms;
+ }
+
+ .lnk-reg:hover{
+    background: #3da43d;
+    color:white;
+ }
+
+/*Login component*/
+
+.login-user-section{
+    background: chocolate;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    height: 501px;
+}
+.login-title h3{
+margin-left: 500px;
+}
+
+.general{
+    margin-top: 40px;
+    border: 2px solid;
+    border-radius: 13px;
+    width: 40%;
+    float: right;
+    margin-right: 420px;
+    padding: 20px;
+}
+
+.general  form  label{
+margin-left: 46px;
+}
+
+.general form input[type="email"]{
+    margin-left: 72px;
+    margin-bottom: 10px;
+}
+
+.general form input[type="password"]{
+    margin-left: 44px;
+    width: 250px;
+}
+
+.general form input[type="submit"]{
+    margin-top: 25px;
+    margin-left: 210px;
+    width: 87px;
+    background: #3da43d;
+    color: white;
+    transition: all 300ms;
+    border: none;
+    font-weight: bold;
+}
+
+.general form input[type="submit"]:hover{
+    background: white;
+    color: chocolate;   
+}
+
+/*new book register*/
+
+.new-book-content{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background: chocolate;
+    padding: 8px;
+    height: 600px;
+}
+
+.newbook-title h4{
+    margin-left: 508px;
+    margin-bottom: 0px;
+}
+
+.newbook-form{
+    margin-top: 33px;
+    margin-left: 381px;
+    width: 40%;
+    border: 2px solid white;
+    border-radius: 13px;
+    padding: 10px;
+    text-align: center;
+}
+
+.newbook-form div{
+    
+    margin-top: 8px;
+}
+
+.newbook-form div  label{
+    margin-left: -63px;
+    width: 127px;
+}
+
+.newbook-form .div-btn-image{
+    margin-top: 23px;
+    margin-left: 97px;
+}
+
+.newbook-form input[type="submit"]{
+    margin-top: 20px;
+    transition: all 300ms;
+    background: #3da43d;
+}
+.newbook-form input[type="number"]{
+    width: 70px;
+}
+
+.newbook-form input[type="submit"]:hover{
+    background: white;
+    color: chocolate;   
+}
+.newbook-form input[type="file"]{
+    background: #3da43d;
+    
+}
+
+/*loanmanager*/
+
+.loanmanager-section{
+    background: chocolate;
+    color: white;
+    height: 501px;
+    padding: 13px;
+}
+
+.loanmanager-section table{
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.loanmanager-section table a{
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+.loanmanager-section table a:hover{
+    font-weight: bold;
+    background: green;
+}
+
+.loanmanager-title{
+    margin-left: 367px;
+}
+
+/*loan edit*/
+
+.loanedit-section{
+    background: chocolate;
+    color: white;
+    padding: 13px;
+    height: 600px;
+}
+
+.loanedit-title{
+margin-left: 500px;
+}
+
+.div-loan{
+    border: 1px solid;
+    border-radius: 13px;
+    padding: 8px;
+    width: 40%;
+    height: 462px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 340px;
+}
+
+.loan-article div{
+    /*border: 1px solid;*/
+    display: flex;
+}
+
+.loan-article .spn-book-id{
+    width: 60px;
+}
+.loan-article .spn-id{
+    margin-left: 89px;
+}
+.loan-article .p-date{
+    margin-left: 48px;
+}
+.loan-article .loan-date-title{
+    width: 100px;
+}
+.loan-article .rtr-date label{
+    width: 107px;
+    font-weight: bold;
+}
+
+.loan-article .rtr-date input{
+    margin-left: 39px;
+    width: 201px;
+}
+.upd-rtr-date{    
+    margin-top: 10px;
+}
+.loan-article form input[type="submit"]{
+    background: #3da43d;
+    color:white;
+    transition: all 300ms;
+}
+.loan-article form input[type="submit"]:hover{
+    background: white;
+    color: chocolate;
+   
+}
+.loan-article .fns-loan{
+    margin-top: 10px;
+    color:#3da43d;
+    background: white;
+    font-weight: bold;
+}
+
+.loan-article .fns-loan:hover{
+    background: chocolate;
+    color: white;
+    border: 2px solid #3da43d;
+}
+
+.book-edit-info{    
+    padding: 7px;
+    margin-top: 30px;
+}
+
+.book-edit-info p{
+    margin-top: -10px;    
+}
+
+.book-edit-info > a{
+    border: none;
+    background: #3da43d;
+    transition: all 300ms;
+}
+
+.book-edit-info a:hover{
+    background: white;
+    color: chocolate;
+}
+
+/*Bookcomponent*/
+
+.book-updt-success{
+    background: chocolate;
+    padding: 1px;
+    color: white;
+}
+.book-updt-success h4{
+    background:#3da43d;
+    margin-left: 54px;
+    margin-top: 5px;
+    width: 346px;
+}
+
+.book-edition-title{
+padding: 5px;    
+margin-left: 550px;
+color: white;
+background: chocolate;
+}
+
+.book-edit{
+    background: chocolate;
+}
+
+.book-edit section{
+    height: 600px;
+}
+
+.book-edit form{
+    border: 2px solid white;
+    border-radius: 13px;
+    width: 40%;
+    color: white;
+    padding: 20px;
+    margin-left: 396px;
+}
+
+
+.book-edit form div label{
+    width: 100px;
+}
+
+.book-edit form div input[type="text"],[type="number"]{
+    width: 302px;
+    margin-top: 10px;
+}
+
+.book-edit form .image-wrap img{
+    border: 2px solid #3da43d;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.book-edit form input[type="submit"]{
+    margin-top: 20px;
+    margin-left: 201px;
+    transition: all 300ms;
+}
+
+.book-edit form input[type="submit"]:hover{
+    background:white;
+    color: chocolate;
+}
+
+/*profile component*/
+
+.user-profile-section{
+    background: chocolate;
+}
+
+.perfil-title{
+    padding: 10px;
+    
+    
+}
+
+.perfil-title h3{
+    color: white;
+    margin-left: 540px;
+}
+
+.user-profile-section section{
+    height: 600px;
+}
+
+.user-profile-section form{
+    border: 2px solid white;
+    width: 35%;
+    border-radius: 13px;
+    padding: 10px;
+    color: white;
+    margin-left: 378px;
+}
+
+.user-profile-section div{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.user-profile-section div label{
+    width: 100px;
+}
+
+.user-profile-section img{
+    border: 2px solid green;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 130px;
+    height: 130px;
+    margin-left: 27px;
+}
+.user-profile-section input[type="text"],[type="email"]{
+    width: 250px;
+}
+.user-profile-section input[type="number"]{
+    width: 60px;
+}
+.user-profile-section input[type="submit"]{
+    margin-top: 25px;
+    margin-left: 181px;
+    transition: all 300ms;
+}
+.user-profile-section input[type="submit"]:hover{
+    background: white;
+    color: chocolate;
+    border:2px solid #3da43d;
+}   
+   
+
+input [type="file"]{
+    background: #3da43d;
+}
+
+/*loans/?????* loanComponent*/
+
+.loan-section-mng{
+    background: chocolate;
+    padding: 11px;
+    height: 600px;
+}
+
+.loan-section-mng .newloan-title{
+color:white;
+margin-bottom: 24px;
+}
+
+.newloan-title h4{
+    margin-top: 10px;
+    margin-left: 450px;
+}
+
+.loan-section-mng form{
+    border: 2px solid white;
+    color: white;
+    width: 40%;
+    border-radius: 13px;
+    margin-left: 383px;
+    padding: 10px;    
+    
+}
+
+.loan-section-mng form div{
+    margin-left: 40px;
+}
+
+.loan-section-mng form label{
+    width: 100px;
+    margin-left: 30px;
+}
+
+.loan-section-mng form input[type="text"]{
+    margin-top: 10px;
+}
+
+.loan-section-mng input[type="date"]{
+    margin-top: 10px;
+}
+
+.loan-section-mng form .image-wrap{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+    width: 192px;
+    margin-left: 125px;
+}
+
+.loan-section-mng form img{
+    border: 2px solid #3da43d;
+}
+
+.loan-section-mng form input[type="submit"]{
+    margin-top: 30px;
+    margin-left: 177px;
+}
+.loan-section-mng form input[type="submit"]:hover{
+    background: white;
+    color: chocolate;
+    border: 2px solid #3da43d;
+    font-weight: bold;
+}
