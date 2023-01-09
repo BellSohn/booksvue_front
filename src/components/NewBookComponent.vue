@@ -63,17 +63,7 @@ export default{
            tokken:null
        } 
 
-       /*constructor(isbn,title,author,editorial,year,pages,image,loaned){
-        this.isbn = isbn,
-        this.title = title,
-        this.author = author,
-        this.editorial = editorial,
-        this.year = year,
-        this.pages = pages,
-        this.image = image,
-        this.loaned = loaned
-
-    } */
+       
     },
     /*components:{
 
@@ -107,8 +97,7 @@ export default{
 
         }
     },
-    mounted(){
-        console.log('new book component loaded');
+    mounted(){        
         this.tokken = localStorage.getItem('tokken');
     },
     
@@ -143,12 +132,7 @@ export default{
                     }
                 })
                 .then(response=>{
-                  if(response.data.bookUpdated){
-                    /*swal(
-                      "Articulo creado",
-                      "Articulo creado correctamente",
-                      "success"
-                    );*/
+                  if(response.data.bookUpdated){                    
                     this.book = response.data.bookUpdated;
                     this.$router.push('/home');
                   }else{
@@ -156,12 +140,7 @@ export default{
                   }
                 });    
 
-                }else{
-                  /*swal(
-                     "Articulo creado",
-                      "Articulo creado correctamente",
-                      "success"
-                  );*/
+                }else{                  
                   this.book = response.data.bookStored;
                   this.$router.push('/home');
                 }                           
@@ -174,10 +153,9 @@ export default{
                    
         },
 
-        fileChange(){
-            //this.file = this.$refs.file.files[0];
+        fileChange(){            
             this.file = this.$refs.file.files[0];
-            //console.log(this.file);
+            
         }
     }
 
