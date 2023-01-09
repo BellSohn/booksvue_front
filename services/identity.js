@@ -1,8 +1,7 @@
 'use strict'
 
 export default function identity({next}){
-    if(!localStorage.getItem('tokken')){
-        //return router.push('/home');
+    if(!localStorage.getItem('tokken')){        
         return false;
     }
      next();
