@@ -66,58 +66,41 @@ export default{
             
         }
 
-        /*constructor(isbn,title,author,editorial,year,pages,image,loaned){
-        this.isbn = isbn,
-        this.title = title,
-        this.author = author,
-        this.editorial = editorial,
-        this.year = year,
-        this.pages = pages,
-        this.image = image,
-        this.loaned = loaned
-        } */
-    },
-    mounted(){
-        console.log("Loancomponent invoked");
-        this.tokken = localStorage.getItem('tokken');
-        this.bookId = this.$route.params.id;
-        //console.log(this.bookId);
-        this.getAllLoans();
-        this.getBookInfo();
         
     },
+    mounted(){        
+        this.tokken = localStorage.getItem('tokken');
+        this.bookId = this.$route.params.id;        
+        this.getAllLoans();
+        this.getBookInfo();        
+    },
+    
     methods:{
         getBookInfo(){
             axios.get(this.url+'getbook/'+this.bookId)
             .then((res)=>{
                 if(res.data.book){
-                    this.mybook = res.data.book
-                    console.log(this.mybook);
+                    this.mybook = res.data.book                    
                 }
             });
         },
-        getAllLoans(){       
-            console.log("get all loans inside");     
+        getAllLoans(){     
             axios.get(this.url+'getloans/')
             .then((res)=>{
                 if(res.data.loans){
-                    this.loans = res.data.loans,
-                    console.log(this.loans);
+                    this.loans = res.data.loans,                    
                 }
             });            
         },
-        saveLoan(){
-            //alert('a guardar!!');
+        saveLoan(){            
             axios.post(this.url+'saveloan/'+this.bookId,this.loan,{
                 headers:{
                     'Authorization':`${this.tokken}`
                 }
             })
             .then((res)=>{
-                if(res.data.loanStored){
-                    //console.log(res.data.loanStored.books[0]._id);
-                    this.lentBookId = res.data.loanStored.books[0]._id;
-                    //console.log("lent book id es : "+this.lentBookId);
+                if(res.data.loanStored){                    
+                    this.lentBookId = res.data.loanStored.books[0]._id;                    
                     axios.put(this.url+'setbookaslent/'+this.lentBookId)
                     .then((res)=>{
                         if(res.data.book){
