@@ -98,12 +98,12 @@ export default{
 
     },
     mounted(){
-        console.log("new user form invoked");
+        
     },
     methods:{
         fileChange(){
             this.file = this.$refs.file.files[0];
-            console.log(this.file);
+            
         },
         resetForm(){            
             this.user.name = "",
@@ -113,14 +113,12 @@ export default{
             this.user.address = "",
             this.user.age = ""
         },
-        crateUser(){ 
-            //console.log("crear usuario!");
+        crateUser(){             
             this.submitted = true;
             this.$v.$touch();
             if(this.$v.$invalid){
                 return false
-            }else{   
-                console.log("estamos aqui!");
+            }else{                
                 axios.post(this.url+'saveuser',this.user)
                 .then((res)=>{                    
                     var userId = res.data.userStored._id;
@@ -139,9 +137,9 @@ export default{
                             this.user = res.data.userUpdated;
                             this.registered = true;                           
                             this.resetForm();                            
-                            //this.$router.push("/home");
+                     
                         }else{
-                            console.log("Error al subir el archivo");
+                            console.log("Error while trying to upload a file");
                         }                        
                     });                            
                         
@@ -149,7 +147,7 @@ export default{
                             this.user = res.data.userStored;
                             this.registered = true;                            
                             this.resetForm();                      
-                            //this.$router.push("/home");  
+                            
                     }
                     
                 });
