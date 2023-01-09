@@ -373,8 +373,7 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    margin-right: 40px;
 }
 
-#formNewUser div{
-   /* width: 200px;*/
+#formNewUser div{   
     display: flex;
 }
 
@@ -587,8 +586,7 @@ margin-left: 500px;
     margin-left: 340px;
 }
 
-.loan-article div{
-    /*border: 1px solid;*/
+.loan-article div{    
     display: flex;
 }
 
@@ -674,10 +672,10 @@ margin-left: 500px;
 }
 
 .book-edition-title{
-padding: 5px;    
-margin-left: 550px;
-color: white;
-background: chocolate;
+    padding: 5px;    
+    margin-left: 550px;
+    color: white;
+    background: chocolate;
 }
 
 .book-edit{
