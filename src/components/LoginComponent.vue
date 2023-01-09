@@ -52,14 +52,12 @@ import Global from '../Global';
 
         },
         mounted(){
-            console.log('login component invoked');
-            //this.user.email = localStorage.getItem('email');
-            
+            console.log('login component invoked');           
         },
+        
         methods:{
-            userlogin(){
-                //console.log("userLogin invoked");
-                //console.log(this.user);
+            userlogin(){           
+            
                 this.submitted = true,
                 this.$v.$touch();                
                 if(this.$v.$invalid){
@@ -67,12 +65,10 @@ import Global from '../Global';
                 }else{                    
                     axios.post(this.url+'login',this.user,                     
                     )
-                    .then((res)=>{
-                        //console.log(res.data);
+                    .then((res)=>{                        
                         localStorage.setItem('tokken',res.data.tokken);
                         axios.post(this.url+'logindata',this.user)
-                        .then((res)=>{
-                            console.log(res.data.userStored);
+                        .then((res)=>{                            
                             this.login = true;
                             localStorage.setItem('name',res.data.userStored.name);                            
                             localStorage.setItem('role',res.data.userStored.role);
