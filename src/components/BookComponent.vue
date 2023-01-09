@@ -81,20 +81,7 @@ export default{
             updated:null,
             dateToday:null
         }
-
-        /* constructor(isbn,title,author,editorial,year,pages,image,loaned){
-        this.isbn = isbn,
-        this.title = title,
-        this.author = author,
-        this.editorial = editorial,
-        this.year = year,
-        this.pages = pages,
-        this.image = image,
-        this.loaned = loaned
-
-    }
-
-    } */
+        
        
     },
     validations:{
@@ -125,14 +112,12 @@ export default{
             }
         }
     },
-    mounted(){
-        //console.log('BookComponent invoked');
+    mounted(){        
         this.role = localStorage.getItem('role');
         this.bookId = this.$route.params.id;
-        this.tokken = localStorage.getItem('tokken');
-        //console.log(this.bookId);
+        this.tokken = localStorage.getItem('tokken');        
         this.loadBookInfo();
-        console.log(this.getDateToday());
+        
     },
    
     methods:{
@@ -141,29 +126,27 @@ export default{
              
         },
         loanBook(){
-            //alert("vas a prestar el libro");
+            
         },
         getDateToday(){
             this.dateToday = new Date();
             const year = this.dateToday.getFullYear();
             const month = this.dateToday.getMonth()+1;
             const day = this.dateToday.getDate();
-            //console.log("dia : "+day+"mes : "+month+ " year :"+year);
+            
             return `${year}-${month}-${day}`;
         },
-        loadBookInfo(){
-            //console.log("loadBookInfo method invoked");
+        loadBookInfo(){            
             axios.get(this.url+'getbook/'+this.bookId)
             .then((res)=>{
                 if(res.data.book){
                     this.book = res.data.book,
-                    console.log(this.book);
+                    
                 }
             });
 
         },
-        updateBook(){
-            //alert("actualizamos libro!!");
+        updateBook(){            
             this.submitted = true;
             this.$v.$touch();
             if(this.$v.$invalid){
@@ -175,8 +158,7 @@ export default{
                      }
                  })
                 .then((res)=>{
-                    if(res.data.bookUpdated){                        
-                        //console.log(res.data.bookUpdated);
+                    if(res.data.bookUpdated){                      
                         if(this.file != '' &&
                         this.file != null && 
                         this.file != undefined){
