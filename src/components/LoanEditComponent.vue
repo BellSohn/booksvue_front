@@ -74,23 +74,20 @@ import Book from '../models/Book';
         this.loanInfo();
         this.tokken = localStorage.getItem('tokken');
         this.loanStatus = this.loan.status;
-        console.log(this.loanStatus);
+        
     },
     methods:{
-        loanInfo(){
-            //console.log('loan info invoked');
+        loanInfo(){            
             this.loanId = this.$route.params.id;
             axios.get(this.url+'getloan/'+this.loanId)
             .then((res)=>{
                 if(res.data.loan){
                     this.loan = res.data.loan;
-                    this.loanStatus = res.data.loan.status;
-                    console.log(this.loan);
+                    this.loanStatus = res.data.loan.status;                   
                 }
             });            
         },
-        updateReturnDate(){
-            //alert("update fuck!!");
+        updateReturnDate(){            
             axios.put(this.url+'updateloan/'+this.loanId,this.loan,{
                 headers:{
                     'Authorization':`${this.tokken}`
@@ -99,21 +96,19 @@ import Book from '../models/Book';
             .then((res)=>{
                 if(res.data.loanUpdated){
                     this.updatedLoan = true;
-                    console.log(res.data.loanUpdated);
+                    
                 }
                 
             });
         },
         endLoan(){
-            //alert("terminar prestamo");
-            //buscamos el prestamo
+            
+            //search book loan
             axios.get(this.url+'getloan/'+this.loanId)
             .then((res)=>{
-                if(res.data.loan){
-                    //console.log(res.data)
-
+                if(res.data.loan){                  
                     if(res.data.loan.status == 'activ'){
-                        //cambiar a completed
+                        //change to completed
                         axios.put(this.url+'endloan/'+this.loanId,this.loan,{
                              headers:{
                             'Authorization':`${this.tokken}`
@@ -121,8 +116,7 @@ import Book from '../models/Book';
                         })
                         .then((res)=>{
                             if(res.data.loan){
-                                this.loan.status = res.data.loan.status;
-                                console.log(res.data.loan);
+                                this.loan.status = res.data.loan.status;                                
                                 if(res.data.loan.status == 'completed'){
                                     this.loanStatus = 'completed'
                                 }
@@ -135,24 +129,19 @@ import Book from '../models/Book';
                 
             });
         },
-        setBookAsFree(){
-            
+        
+        setBookAsFree(){            
             this.bookId = this.loan.books[0]._id;            
-            //buscamos el libro
-            console.log(this.bookId);
+            //search the book           
             axios.get(this.url+'getbook/'+this.bookId)
             .then((res)=>{
-                if(res.data.book){
-                    console.log(res.data.book);
-                    console.log(res.data.book.loaned);
-                   if(res.data.book.loaned == true){
-                       //cambiamo el loaned a false
-                       //console.log("joderos!!");
+                if(res.data.book){                  
+                    if(res.data.book.loaned == true){
+                       //change loan to false                       
                        axios.put(this.url+'setbookasfree/'+this.bookId)
                        .then((res)=>{
                            if(res.data.book){
-                               this.book  = res.data.book;
-                               //console.log(this.book);
+                               this.book  = res.data.book;                               
                                if(this.book.loaned == false){
                                    this.bookLent = 'false'
                                }
@@ -161,8 +150,7 @@ import Book from '../models/Book';
                    }
                    
                 }
-            });
-            
+            });            
             
             
         }
