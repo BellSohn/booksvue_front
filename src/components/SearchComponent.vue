@@ -1,8 +1,5 @@
 <template>
-    <section>
-           <!-- <div id="search-title">
-                <h2>founded books</h2>
-            </div>-->
+    <section>           
             <div v-if="books.length < 1" class="noresults-div">
                 <span>sorry,no resuts,try it again</span>
             </div>
@@ -28,7 +25,7 @@ export default{
     mounted(){
         var searchString = this.$route.params.searchString;
         this.getBooksBySearch(searchString);
-        //console.log(searchString);
+        
     },
     data(){
         return{
@@ -44,7 +41,7 @@ export default{
         .then((res)=>{
             if(res.data.books){
                 this.books=res.data.books,
-                console.log(this.books);
+                
 
             }
         });
