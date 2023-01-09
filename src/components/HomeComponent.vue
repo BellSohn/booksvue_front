@@ -26,7 +26,7 @@
 <script>
 import axios from 'axios';
 import Global from '../Global';
-//import Books from './Books.vue';
+
 export default {
   name: 'HelloWorld',
   components:{
@@ -35,8 +35,7 @@ export default {
   props: {
     //msg: String
   },
-  mounted(){
-    //console.log("HelloWorld invoked!");
+  mounted(){    
     this.role = localStorage.getItem('role');
     this.getArrayData();
     
@@ -52,32 +51,19 @@ export default {
     }
   },
   methods:{
-    getArrayData(){
-      //return this.books;      
+    getArrayData(){      
       axios.get(this.url+'getbooks')
       .then((res)=>{
         this.books=res.data.books.docs
        console.log(this.books);
 
-       var testMap = this.books.map(function(element){
-         //return `${element._id}${element.title}`;
+       var testMap = this.books.map(function(element){         
          return element._id;
          
        });
-
-       //console.log(testMap);
-       this.booksId.push(testMap);
-       //console.log(this.booksId);
        
-
-       /* const bookSet = this.books.map(item =>{
-          const container = {};
-          container[item._id] = item._id;
-          return container;
-        });
-        console.log(bookSet);*/
-        
-        
+       this.booksId.push(testMap);            
+                
       });
     },
     
