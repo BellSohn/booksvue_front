@@ -38,10 +38,10 @@
     </section>
 </template>
 <script>
-//import axios from 'axios';
+
 import Global from '../Global';
 import SidebarComponent from '../components/SidebarComponent.vue';
-//import Search from './Search.vue';
+
 
 export default{
     name:'Books',
@@ -62,15 +62,6 @@ export default{
         this.role = localStorage.getItem('role')
         //this.getAllBooks();
     },
-    /*
-    methods:{
-        getAllBooks(){
-            axios.get(this.url+'allbooks')
-            .then((res)=>{
-                this.books = res.data.books,
-                console.log(this.books);
-            });
-        }
-    }*/
+   
 }   
 </script>
