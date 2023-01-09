@@ -31,7 +31,6 @@
 </template>
 <script>
 import Global from "../Global";
-//import Loan from '../models/Loan';
 import axios from "axios";
 import Loan from '../models/Loan';
 export default {
@@ -40,8 +39,7 @@ export default {
     return {
       axios: null,
       url: Global.url,
-      loans:[Loan],
-      //Loan:[],
+      loans:[Loan],      
       books:[]
     };
   },
@@ -52,16 +50,13 @@ export default {
     getAllLoans() {
       axios.get(this.url + "getloans").then((res) => {
         if (res.data.loans) {
-          this.loans = res.data.loans;
-          console.log(this.loans);
-         // this.Loan = res.data.loans;
+          this.loans = res.data.loans;         
           var BooksLoans = this.loans.map(function(element){
-            return element.books;
-            //this.books.push(element.books);
+            return element.books;            
           });
           this.books = BooksLoans;
         }
-        console.log(this.books);
+        
       });
     },
   },
