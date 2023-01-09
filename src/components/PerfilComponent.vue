@@ -71,19 +71,7 @@ export default{
             userId:null,
             logged:null
 
-        }
-
-        /*constructor(name,surname,email,password,address,age,image,role,tokken){
-        this.name = name,
-        this.surname = surname,
-        this.email = email,
-        this.password = password,
-        this.address = address,
-        this.age = age,
-        this.image = image,
-        this.role = role,
-        this.tokken = tokken      
-    }        */
+        }      
         
 
     },
@@ -127,7 +115,7 @@ export default{
 
         fileChange(){
             this.file = this.$refs.file.files[0];
-            console.log(this.file);
+            
         },
         getDataUser(){
          axios.get(this.url+'getuser/'+this.userId)
@@ -137,8 +125,7 @@ export default{
              }
          });   
         },
-        updateUser(){            
-           
+        updateUser(){           
             this.submitted = true;
             this.$v.$touch();
             if(this.$v.$invalid){
